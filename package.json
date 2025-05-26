@@ -1,8 +1,25 @@
 {
-  "name": "openapi-stub-generator",
+  "name": "@syntropiq/openapi-codegen",
   "version": "1.0.0",
   "description": "A tool to generate TypeScript stubs and types from OpenAPI YAML files with configurable endpoint URLs and API keys.",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "openapi-codegen": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syntropiq/openapi-codegen.git"
+  },
+  "homepage": "https://github.com/syntropiq/openapi-codegen#readme",
+  "bugs": {
+    "url": "https://github.com/syntropiq/openapi-codegen/issues"
+  },
   "scripts": {
     "build": "tsc",
     "start": "npm run build && node dist/index.js",
@@ -10,15 +27,21 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "generate": "npm start",
     "validate": "node scripts/validate.js",
-    "lint": "npx tsc --noEmit"
+    "lint": "npx tsc --noEmit",
+    "prepublishOnly": "npm run build",
+    "prepare": "npm run build"
   },
   "keywords": [
-    "OpenAPI",
-    "TypeScript",
+    "openapi",
+    "typescript",
     "stubs",
-    "generator"
+    "generator",
+    "api",
+    "codegen",
+    "cloudflare",
+    "workers"
   ],
-  "author": "Your Name",
+  "author": "devlux76 <devlux76@icloud.com>",
   "license": "MIT",
   "dependencies": {
     "js-yaml": "^4.1.0"
