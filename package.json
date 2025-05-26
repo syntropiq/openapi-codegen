@@ -1,0 +1,31 @@
+{
+  "name": "openapi-stub-generator",
+  "version": "1.0.0",
+  "description": "A tool to generate TypeScript stubs and types from OpenAPI YAML files with configurable endpoint URLs and API keys.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node dist/index.js",
+    "dev": "tsc --watch",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate": "npm start",
+    "validate": "node scripts/validate.js",
+    "lint": "npx tsc --noEmit"
+  },
+  "keywords": [
+    "OpenAPI",
+    "TypeScript",
+    "stubs",
+    "generator"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0",
+    "@types/js-yaml": "^4.0.5"
+  }
+}
